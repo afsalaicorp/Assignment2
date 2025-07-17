@@ -32,7 +32,7 @@ const { products, fetchProducts } = useProducts()
 
 onMounted(async () => {
   if (!products.value.length) {
-    await fetchProducts() // load products if not loaded yet
+    await fetchProducts() 
   }
 
   product.value = products.value.find(p => p.id.toString() === productId) || null
